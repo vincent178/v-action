@@ -24,3 +24,4 @@ jobs:
         file-path: Localizable.strings
         commit-msg: commit change
         github-token: ${{ secrets.GITHUB_TOKEN }}
+        branch: phrase-locales
