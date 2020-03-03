@@ -1,7 +1,7 @@
 name: translation file encoding
 
 on: 
-  pull_request:
+  push:
     branches: 
       - phrase-locales
 
