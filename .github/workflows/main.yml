@@ -14,7 +14,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: update encoding
       run: |
-        iconv -f UTF-16 -t UTF-8//TRANSLIT Localizable.strings -o Localizable.strings
+        mkdir tmp
+        iconv -f UTF-16 -t UTF-8//TRANSLIT Localizable.strings -o tmp/Localizable.strings
+        mv tmp/Localizable.strings Localizable.strings
+        rm -rf tmp
     - name: commit change
       uses: alexesprit/action-update-file@master
       with:
